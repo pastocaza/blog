@@ -8,13 +8,13 @@
 @endpush
 
 @section('body')
-    <h1>About</h1>
+    <h1>Hello.</h1>
 
     <img src="/assets/img/about.jpg"
          alt="About image"
          class="flex rounded-full h-64 w-64 bg-contain mx-auto md:float-right my-6 md:ml-10">
 
-    <p class="mb-6">Hello! I'm <a href="https://twitter.com/perastocaza">Percy Astocaza</a>, a full-stack web developer based in Chimbote, Peru.</p>
+    <p class="mb-6">I'm <a href="https://twitter.com/perastocaza">Percy Astocaza</a>, a full-stack web developer based in Chimbote, Peru.</p>
 
     <p class="mb-6">I'm also a <a href="https://www.codementor.io/@percyastocaza">Codementor</a>, where I help people with software problems and teach students programming concepts in a simple manner.</p>
 

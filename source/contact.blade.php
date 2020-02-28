@@ -1,73 +1,36 @@
 @extends('_layouts.master')
 
 @push('meta')
-    <meta property="og:title" content="Contact {{ $page->siteName }}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Contact {{ $page->siteName }}"/>
+    <meta property="og:type" content="website"/>
     <meta property="og:url" content="{{ $page->getUrl() }}"/>
-    <meta property="og:description" content="Get in touch with {{ $page->siteName }}" />
+    <meta property="og:description" content="Get in touch with {{ $page->siteName }}"/>
 @endpush
 
 @section('body')
-<h1>Contact</h1>
+    <h1>Contact</h1>
 
-<p class="mb-8">
-    Static sites are unable to handle form submissions. However, there are third-party services, like Tighten’s <a href="https://fieldgoal.io" title="FieldGoal">FieldGoal</a>, which can accept the form submission, email you the result, and redirect back to a thank you page.
-</p>
+    <p class="mb-8">
+        Hey! I currently work full-time but I always have time for a side project, feel free to contact me if you need to
+        solve a problem or have a great idea in mind.
+    </p>
 
-<form action="/contact" class="mb-12">
-    <div class="flex flex-wrap mb-6 -mx-3">
-        <div class="w-full md:w-1/2 mb-6 md:mb-0 px-3">
-            <label class="block mb-2 text-gray-800 text-sm font-semibold" for="contact-name">
-                Name
-            </label>
-
-            <input
-                type="text"
-                id="contact-name"
-                placeholder="Jane Doe"
-                name="name"
-                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
-                required
-            >
+    <div class="md:w-3/4 mt-6 sm:mt-12 text-grey-darkest antialiased">
+        <div class="py-4 flex">
+            <div class="w-32 sm:w-48">Twitter:</div>
+            <a class="link no-underline" href="https://twitter.com/perastocaza">@perastocaza</a>
         </div>
-
-        <div class="w-full px-3 md:w-1/2">
-            <label class="block text-gray-800 text-sm font-semibold mb-2" for="contact-email">
-                Email Address
-            </label>
-
-            <input
-                type="email"
-                id="contact-email"
-                placeholder="email@domain.com"
-                name="email"
-                class="block w-full border shadow rounded-lg outline-none mb-2 px-4 py-3"
-                required
-            >
+        <div class="py-4 flex border-t">
+            <div class="w-32 sm:w-48">GitHub:</div>
+            <a class="link no-underline" href="https://github.com/iRynoh">@iRynoh</a>
+        </div>
+        <div class="py-4 flex border-t">
+            <div class="w-32 sm:w-48">
+                <div class="sm:hidden">Email:</div>
+                <div class="hidden sm:block">Email address:</div>
+            </div>
+            <a class="link no-underline" href="mailto:percy@astocaza.dev">percy@astocaza.dev</a>
         </div>
     </div>
 
-    <div class="w-full mb-12">
-        <label class="block text-gray-800 text-sm font-semibold mb-2" for="contact-message">
-            Message
-        </label>
-
-        <textarea
-            id="contact-message"
-            rows="4"
-            name="message"
-            class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-3"
-            placeholder="A lovely message here."
-            required
-        ></textarea>
-    </div>
-
-    <div class="flex justify-end w-full">
-        <input
-            type="submit"
-            value="Submit"
-            class="block bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold leading-snug tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
-        >
-    </div>
-</form>
 @stop
