@@ -2,9 +2,10 @@
 extends: _layouts.post
 section: content
 title: My First Blog Post
-date: 2017-03-23
+author: Percy Astocaza
+date: 2020-02-29
 description: This is your first blog post.
-cover_image: /assets/img/post-cover-image-2.png
+cover_image: /assets/img/my-first-blog-post-cover.png
 ---
 
-This is the start of your first blog post.
+This is a work in progress. I will update it when I have time!

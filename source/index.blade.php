@@ -1,51 +1,26 @@
 @extends('_layouts.master')
 
+@push('meta')
+    <meta property="og:title" content="About {{ $page->siteName }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ $page->getUrl() }}"/>
+    <meta property="og:description" content="A little bit about {{ $page->siteName }}" />
+@endpush
+
 @section('body')
-    @foreach ($posts->where('featured', true) as $featuredPost)
-        <div class="w-full mb-6">
-            @if ($featuredPost->cover_image)
-                <img src="{{ $featuredPost->cover_image }}" alt="{{ $featuredPost->title }} cover image" class="mb-6">
-            @endif
+    <h1>About</h1>
 
-            <p class="text-gray-700 font-medium my-2">
-                {{ $featuredPost->getDate()->format('F j, Y') }}
-            </p>
+    <img src="/assets/img/about.jpg"
+         alt="About image"
+         class="flex rounded-full h-64 w-64 bg-contain mx-auto md:float-right my-6 md:ml-10">
 
-            <h2 class="text-3xl mt-0">
-                <a href="{{ $featuredPost->getUrl() }}" title="Read {{ $featuredPost->title }}" class="text-gray-900 font-extrabold">
-                    {{ $featuredPost->title }}
-                </a>
-            </h2>
+    <p class="mb-6">Hello! I'm <a href="https://twitter.com/perastocaza">Percy Astocaza</a>, a full-stack web developer based in Chimbote, Peru.</p>
 
-            <p class="mt-0 mb-4">{!! $featuredPost->getExcerpt() !!}</p>
+    <p class="mb-6">I'm also a <a href="https://www.codementor.io/@percyastocaza">Codementor</a>, where I help people with software problems and teach students programming concepts in a simple manner.</p>
 
-            <a href="{{ $featuredPost->getUrl() }}" title="Read - {{ $featuredPost->title }}" class="uppercase tracking-wide mb-4">
-                Read
-            </a>
-        </div>
+    <p class="mb-6">My favorite stack includes
+        <a href="https://laravel.com">Laravel</a>, <a href="https://vuejs.org">Vue</a> or <a href="https://reactjs.org">React</a> and
+        <a href="https://tailwindcss.com">Tailwind CSS</a>, but I'm happy to work with other technologies and learn new things.</p>
 
-        @if (! $loop->last)
-            <hr class="border-b my-6">
-        @endif
-    @endforeach
-
-    @include('_components.newsletter-signup')
-
-    @foreach ($posts->where('featured', false)->take(6)->chunk(2) as $row)
-        <div class="flex flex-col md:flex-row md:-mx-6">
-            @foreach ($row as $post)
-                <div class="w-full md:w-1/2 md:mx-6">
-                    @include('_components.post-preview-inline')
-                </div>
-
-                @if (! $loop->last)
-                    <hr class="block md:hidden w-full border-b mt-2 mb-6">
-                @endif
-            @endforeach
-        </div>
-
-        @if (! $loop->last)
-            <hr class="w-full border-b mt-2 mb-6">
-        @endif
-    @endforeach
-@stop
+    <p class="mb-6">In my free time, I enjoy spending time with my wife and our Peruvian dog Tabita, read light novels and watch movies.</p>
+@endsection
