@@ -1,11 +1,8 @@
-@extends('_layouts.master')
+@extends('_layouts.main')
 
-@push('meta')
-    <meta property="og:title" content="{{ $page->title }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ $page->getUrl() }}"/>
-    <meta property="og:description" content="{{ $page->description }}" />
-@endpush
+@php
+    $page->type = 'article';
+@endphp
 
 @section('body')
     @if ($page->cover_image)
@@ -14,7 +11,7 @@
 
     <h1 class="leading-none mb-2">{{ $page->title }}</h1>
 
-    <p class="text-gray-700 text-xl md:mt-0">Published by {{ $page->author }}  on  {{ date('F j, Y', $page->date) }}</p>
+    <p class="text-gray-700 text-xl md:mt-0">{{ $page->author }}  •  {{ date('F j, Y', $page->date) }}</p>
 
     @if ($page->categories)
         @foreach ($page->categories as $i => $category)

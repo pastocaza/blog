@@ -1,5 +1,7 @@
+/.idea/
 /build_*/
 /node_modules/
+/source/assets/build/
 /vendor/
-/.idea/
 .DS_Store
+/.env

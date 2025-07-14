@@ -1,7 +1,0 @@
-[build]
-    command = "npm run staging"
-    publish = "build_staging"
-
-[context.production]
-    command="npm run production"
-    publish="build_production"

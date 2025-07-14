@@ -1,16 +1,9 @@
-@extends('_layouts.master')
-
-@push('meta')
-    <meta property="og:title" content="About {{ $page->siteName }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ $page->getUrl() }}"/>
-    <meta property="og:description" content="A little bit about {{ $page->siteName }}" />
-@endpush
+@extends('_layouts.main')
 
 @section('body')
     <h1>Hello.</h1>
 
-    <img src="/assets/img/about.jpg"
+    <img src="/assets/images/about.jpg"
          alt="About image"
          class="flex rounded-full h-64 w-64 bg-contain mx-auto md:float-right my-6 md:ml-10">
 
@@ -23,4 +16,4 @@
         <a href="https://tailwindcss.com">Tailwind CSS</a>, but I'm happy to work with other technologies and learn new things.</p>
 
     <p class="mb-6">In my free time, I enjoy spending time with my wife and our Peruvian dog Tabita, read light novels and watch movies.</p>
-@endsection
+@stop

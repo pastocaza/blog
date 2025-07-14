@@ -1,18 +1,14 @@
-@extends('_layouts.master')
-
-@push('meta')
-    <meta property="og:title" content="Contact {{ $page->siteName }}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="{{ $page->getUrl() }}"/>
-    <meta property="og:description" content="Get in touch with {{ $page->siteName }}"/>
-@endpush
+---
+title: Contact
+description: Get in touch with me
+---
+@extends('_layouts.main')
 
 @section('body')
     <h1>Contact</h1>
 
     <p class="mb-8">
-        Hey! I currently work full-time, but I always have time for a side project. Feel free to contact me if you need to
-        solve a problem or have a great idea in mind.
+        Hey! I currently work full-time, but I always have time for a side project. Feel free to contact me if you need to solve a problem or have a great idea in mind.
     </p>
 
     <div class="md:w-3/4 mt-6 sm:mt-12 text-grey-darkest antialiased">
@@ -32,5 +28,4 @@
             <a class="link no-underline" href="mailto:percy@astocaza.dev">percy@astocaza.dev</a>
         </div>
     </div>
-
 @stop
