@@ -11,7 +11,7 @@
     <h1>Contact</h1>
 
     <p class="mb-8">
-        Hey! I currently work full-time but I always have time for a side project, feel free to contact me if you need to
+        Hey! I currently work full-time, but I always have time for a side project. Feel free to contact me if you need to
         solve a problem or have a great idea in mind.
     </p>
 
@@ -22,7 +22,7 @@
         </div>
         <div class="py-4 flex border-t">
             <div class="w-32 sm:w-48">GitHub:</div>
-            <a class="link no-underline" href="https://github.com/iRynoh">@iRynoh</a>
+            <a class="link no-underline" href="https://github.com/pastocaza">@pastocaza</a>
         </div>
         <div class="py-4 flex border-t">
             <div class="w-32 sm:w-48">
